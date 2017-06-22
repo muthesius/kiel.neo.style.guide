@@ -1,0 +1,26 @@
+header {
+    & > section {
+        background-color: rgba($base, 0.5);
+        h1 {
+            background-image: url('../img/logo.png');
+            background-repeat: no-repeat;
+        }
+        p > *:first-child {
+            color: $base-inverse;
+        }
+        p {
+            color: $bright-text;
+        }
+    }
+    nav a {
+        color: $bright-text;
+    }
+}
+
+main {
+    background-color: $main-bg-color;
+}
+
+footer {
+    background-color: $base;
+}

@@ -1,0 +1,67 @@
+body,
+html,
+header,
+* {
+    margin: 0;
+    padding: 0;
+}
+
+$header-padding: 20px;
+
+header {
+    // TODO: 50px ist höhe des footers, in variable verschieben.
+    height: calc(100vh - 50px);
+    position: relative;
+    & > section:not(.slideshow) {
+        height: 235px;
+        position: relative;
+        padding: $header-padding;
+        h1 {
+            width: 210px;
+            height: 50%;
+            position: fixed;
+        }
+        p {
+            height: calc(50% - $header-padding);
+            min-width: 200px;
+            max-width: 500px;
+            $_header_p_width: 42%;
+            width: $_header_p_width;
+            margin-left: 25%;
+            bottom: $header-padding;
+            position: absolute;
+        }
+        p > *:first-child {
+            color: $base-inverse;
+        }
+    }
+
+    & > nav {
+        height: 50px;
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        text-align: center;
+        a {
+            display: block;
+            margin: -50px;
+        }
+    }
+
+    .slideshow {
+        position: fixed;
+        top: 0;
+        z-index: -1;
+    }
+}
+
+main {
+    padding: 0 $header-padding;
+}
+
+footer {
+    position: fixed;
+    height: 50px;
+    bottom: 0;
+    width: 100%;
+}
